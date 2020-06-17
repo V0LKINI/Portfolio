@@ -1,9 +1,12 @@
 <h1>This is my home page</h1>
+{% load static%}
 
-{% for project in projects.all %}
+<img src="{% static 'portfolio/original.jpg' %}">
+
+{% for project in projects %}
 
 <h1>{{ project.title }}</h1>
-<p>{{ project.discription }}</p>
+<p>{{ project.description }}</p>
 <img src="{{ project.image.url }}">
 {% if project.url %}
 <br><a href="{{project.url}}"></a>
