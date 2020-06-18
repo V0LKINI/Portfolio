@@ -1,1 +1,13 @@
-{{ post.title }}
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+<h1>
+	<a href="{% url 'home' %}">Home</a>
+	<a href="{% url 'post:all_blogs' %}">Blog</a>
+</h1>
+<h2>{{ post.title }}</h2>
+<h2>--{{ post.date|date:'F jS Y' }}--</h2>
+<p>{{ post.description|safe }}</p>
+
+{% endblock %}

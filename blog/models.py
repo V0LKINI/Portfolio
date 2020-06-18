@@ -5,8 +5,8 @@ class Post(models.Model):
 	description = models.TextField()
 	date = models.DateField()
 
-	def brief_text(self):
-		return self.description[0:50]
+	def __str__(self):
+		return self.title
 
 
 	
